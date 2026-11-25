@@ -1,0 +1,39 @@
+{
+  "target": "http://localhost:8002",
+  "concurrency": 20,
+  "total_requests": 300,
+  "duration_s": 7.86,
+  "rps": 38.19,
+  "error_rate": 0.0167,
+  "status_codes": {
+    "200": 295,
+    "503": 5
+  },
+  "latency_ms": {
+    "min": 181.3,
+    "avg": 442.9,
+    "p50": 269.8,
+    "p90": 828.0,
+    "p95": 1528.2,
+    "p99": 2102.8,
+    "max": 2658.0
+  },
+  "total_cost_usd": 0.010016,
+  "slo": {
+    "p95_ms": 500,
+    "error_rate": 0.02,
+    "passed": false
+  },
+  "measurement_environment": {
+    "platform": "Linux container on Docker Desktop WSL2",
+    "python": "3.11.18",
+    "date": "2026-11-25",
+    "docker_cpus": 8,
+    "docker_memory_gib": 3.74,
+    "source_location": "container-native copy of final v2 KB; no image builds during measurement"
+  },
+  "mock_settings": {
+    "MOCK_ERROR_RATE": 0.01,
+    "MOCK_SLOW_RATE": 0.03
+  }
+}

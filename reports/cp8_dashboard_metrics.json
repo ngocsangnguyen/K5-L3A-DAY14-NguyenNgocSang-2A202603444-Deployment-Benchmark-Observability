@@ -1,0 +1,210 @@
+{
+  "scale_3": {
+    "captured_at_utc": "2026-11-25T08:51:36Z",
+    "queries": {
+      "p95_seconds": {
+        "promql": "histogram_quantile(0.95, sum by (le) (rate(http_request_duration_seconds_bucket{job=\"agent\",route=\"/ask\"}[1m])))",
+        "response": {
+          "status": "success",
+          "data": {
+            "resultType": "vector",
+            "result": [
+              {
+                "metric": {},
+                "value": [
+                  1795596697.114,
+                  "1.9648860868064422"
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "average_seconds": {
+        "promql": "sum(rate(http_request_duration_seconds_sum{job=\"agent\",route=\"/ask\"}[1m])) / sum(rate(http_request_duration_seconds_count{job=\"agent\",route=\"/ask\"}[1m]))",
+        "response": {
+          "status": "success",
+          "data": {
+            "resultType": "vector",
+            "result": [
+              {
+                "metric": {},
+                "value": [
+                  1795596697.288,
+                  "0.586834406663789"
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "rps_per_instance": {
+        "promql": "sum by (instance) (rate(http_requests_total{job=\"agent\",route=\"/ask\"}[1m]))",
+        "response": {
+          "status": "success",
+          "data": {
+            "resultType": "vector",
+            "result": [
+              {
+                "metric": {
+                  "instance": "172.20.0.8:8000"
+                },
+                "value": [
+                  1795596697.353,
+                  "13.088433595989494"
+                ]
+              },
+              {
+                "metric": {
+                  "instance": "172.20.0.9:8000"
+                },
+                "value": [
+                  1795596697.353,
+                  "12.221737232649499"
+                ]
+              },
+              {
+                "metric": {
+                  "instance": "172.20.0.6:8000"
+                },
+                "value": [
+                  1795596697.353,
+                  "13.763922569027613"
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "tokens_per_second": {
+        "promql": "sum by (type) (rate(llm_tokens_total{job=\"agent\"}[1m]))",
+        "response": {
+          "status": "success",
+          "data": {
+            "resultType": "vector",
+            "result": [
+              {
+                "metric": {
+                  "type": "input"
+                },
+                "value": [
+                  1795596697.385,
+                  "3014.1657712721626"
+                ]
+              },
+              {
+                "metric": {
+                  "type": "output"
+                },
+                "value": [
+                  1795596697.385,
+                  "1577.5498314661963"
+                ]
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  "chaos_2": {
+    "query_time_utc": "2026-11-25T08:59:00Z",
+    "configuration": "2 instances, 30 users, MOCK_ERROR_RATE=0.2, MOCK_SLOW_RATE=0.3",
+    "queries": {
+      "p95_seconds": {
+        "promql": "histogram_quantile(0.95, sum by (le) (rate(http_request_duration_seconds_bucket{job=\"agent\",route=\"/ask\"}[1m])))",
+        "response": {
+          "status": "success",
+          "data": {
+            "resultType": "vector",
+            "result": [
+              {
+                "metric": {},
+                "value": [
+                  1795597140,
+                  "1.9057794293272892"
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "average_seconds": {
+        "promql": "sum(rate(http_request_duration_seconds_sum{job=\"agent\",route=\"/ask\"}[1m])) / sum(rate(http_request_duration_seconds_count{job=\"agent\",route=\"/ask\"}[1m]))",
+        "response": {
+          "status": "success",
+          "data": {
+            "resultType": "vector",
+            "result": [
+              {
+                "metric": {},
+                "value": [
+                  1795597140,
+                  "0.630728648781478"
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "rps_per_instance": {
+        "promql": "sum by (instance) (rate(http_requests_total{job=\"agent\",route=\"/ask\"}[1m]))",
+        "response": {
+          "status": "success",
+          "data": {
+            "resultType": "vector",
+            "result": [
+              {
+                "metric": {
+                  "instance": "172.20.0.6:8000"
+                },
+                "value": [
+                  1795597140,
+                  "7.257712456344587"
+                ]
+              },
+              {
+                "metric": {
+                  "instance": "172.20.0.2:8000"
+                },
+                "value": [
+                  1795597140,
+                  "7.675937210106044"
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "tokens_per_second": {
+        "promql": "sum by (type) (rate(llm_tokens_total{job=\"agent\"}[1m]))",
+        "response": {
+          "status": "success",
+          "data": {
+            "resultType": "vector",
+            "result": [
+              {
+                "metric": {
+                  "type": "input"
+                },
+                "value": [
+                  1795597140,
+                  "894.2548615498918"
+                ]
+              },
+              {
+                "metric": {
+                  "type": "output"
+                },
+                "value": [
+                  1795597140,
+                  "465.63532968480433"
+                ]
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}

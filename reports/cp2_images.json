@@ -1,0 +1,13 @@
+{
+  "my-agent:develop": {
+    "inspect_size_bytes": 426319720,
+    "inspect_size_mib": 406.57,
+    "docker_image_ls_size": "1.67GB"
+  },
+  "my-agent:advanced": {
+    "inspect_size_bytes": 57409289,
+    "inspect_size_mib": 54.75,
+    "docker_image_ls_size": "240MB"
+  },
+  "develop_ask_status": 200
+}

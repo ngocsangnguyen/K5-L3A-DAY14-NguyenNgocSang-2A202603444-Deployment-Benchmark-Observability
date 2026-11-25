@@ -1,0 +1,12 @@
+# HELP agent_question_length_chars Question length in characters
+# TYPE agent_question_length_chars histogram
+agent_question_length_chars_bucket{le="20.0"} 1.0
+agent_question_length_chars_bucket{le="50.0"} 16.0
+agent_question_length_chars_bucket{le="100.0"} 23.0
+agent_question_length_chars_bucket{le="200.0"} 23.0
+agent_question_length_chars_bucket{le="500.0"} 23.0
+agent_question_length_chars_bucket{le="1000.0"} 23.0
+agent_question_length_chars_bucket{le="2000.0"} 23.0
+agent_question_length_chars_bucket{le="+Inf"} 23.0
+agent_question_length_chars_count 23.0
+agent_question_length_chars_sum 1066.0

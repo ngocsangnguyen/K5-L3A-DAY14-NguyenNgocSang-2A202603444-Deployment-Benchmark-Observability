@@ -1,0 +1,159 @@
+============================================================
+Stateless Scaling Demo
+============================================================
+
+Session ID: 9942c5a5-9849-42fd-bb06-835c6e9b65d1
+
+Request 1: [instance-ca8828]
+  Q: What is Docker?
+  A: Container là cách đóng gói app để chạy ở mọi nơi. Build once, run anywhere!...
+
+Request 2: [instance-83ea3f]
+  Q: Why do we need containers?
+  A: Đây là câu trả lời từ AI agent (mock). Trong production, đây sẽ là response từ O...
+
+Request 3: [instance-ca8828]
+  Q: What is Kubernetes?
+  A: Đây là câu trả lời từ AI agent (mock). Trong production, đây sẽ là response từ O...
+
+Request 4: [instance-83ea3f]
+  Q: How does load balancing work?
+  A: Tôi là AI agent được deploy lên cloud. Câu hỏi của bạn đã được nhận....
+
+Request 5: [instance-ca8828]
+  Q: What is Redis used for?
+  A: Agent đang hoạt động tốt! (mock response) Hỏi thêm câu hỏi đi nhé....
+
+------------------------------------------------------------
+Total requests: 5
+Instances used: {'instance-83ea3f', 'instance-ca8828'}
+✅ All requests served despite different instances!
+
+--- Conversation History ---
+Total messages: 10
+  [user]: What is Docker?...
+  [assistant]: Container là cách đóng gói app để chạy ở mọi nơi. Build once...
+  [user]: Why do we need containers?...
+  [assistant]: Đây là câu trả lời từ AI agent (mock). Trong production, đây...
+  [user]: What is Kubernetes?...
+  [assistant]: Đây là câu trả lời từ AI agent (mock). Trong production, đây...
+  [user]: How does load balancing work?...
+  [assistant]: Tôi là AI agent được deploy lên cloud. Câu hỏi của bạn đã đư...
+  [user]: What is Redis used for?...
+  [assistant]: Agent đang hoạt động tốt! (mock response) Hỏi thêm câu hỏi đ...
+
+✅ Session history preserved across all instances via Redis!
+
+
+=== CP4 repeat verification 2026-11-25T09:27:49.186119+00:00 ===
+{
+  "verified_at_utc": "2026-11-25T09:27:49.186119+00:00",
+  "running_agent_count": 3,
+  "containers": [
+    {
+      "name": "k5-day14-scaling-agent-1",
+      "running": true,
+      "health": "healthy",
+      "ip": "172.19.0.4"
+    },
+    {
+      "name": "k5-day14-scaling-agent-2",
+      "running": true,
+      "health": "healthy",
+      "ip": "172.19.0.3"
+    },
+    {
+      "name": "k5-day14-scaling-agent-3",
+      "running": true,
+      "health": "healthy",
+      "ip": "172.19.0.5"
+    }
+  ],
+  "health": {
+    "status": 200,
+    "body": {
+      "status": "ok",
+      "instance_id": "instance-0c0380",
+      "uptime_seconds": 36.0,
+      "storage": "redis",
+      "redis_connected": true
+    }
+  },
+  "ready": {
+    "status": 200,
+    "body": {
+      "ready": true,
+      "instance": "instance-becd1c"
+    }
+  },
+  "script_exit_code": 0,
+  "script_instances": [
+    "instance-0c0380",
+    "instance-3886a4",
+    "instance-becd1c"
+  ],
+  "script_session_id": "c4996780-233b-410e-8d1e-5c27596f16fa",
+  "history_count": 10,
+  "history_roles_verified": true,
+  "extra_session_container_routing": [
+    {
+      "status": 200,
+      "served_by": "instance-0c0380",
+      "upstream": "172.19.0.5:8000",
+      "storage": "redis"
+    },
+    {
+      "status": 200,
+      "served_by": "instance-becd1c",
+      "upstream": "172.19.0.4:8000",
+      "storage": "redis"
+    }
+  ]
+}
+
+Command: python -X utf8 test_stateless.py
+============================================================
+Stateless Scaling Demo
+============================================================
+
+Session ID: c4996780-233b-410e-8d1e-5c27596f16fa
+
+Request 1: [instance-3886a4]
+  Q: What is Docker?
+  A: Container là cách đóng gói app để chạy ở mọi nơi. Build once, run anywhere!...
+
+Request 2: [instance-0c0380]
+  Q: Why do we need containers?
+  A: Agent đang hoạt động tốt! (mock response) Hỏi thêm câu hỏi đi nhé....
+
+Request 3: [instance-becd1c]
+  Q: What is Kubernetes?
+  A: Tôi là AI agent được deploy lên cloud. Câu hỏi của bạn đã được nhận....
+
+Request 4: [instance-3886a4]
+  Q: How does load balancing work?
+  A: Đây là câu trả lời từ AI agent (mock). Trong production, đây sẽ là response từ O...
+
+Request 5: [instance-0c0380]
+  Q: What is Redis used for?
+  A: Đây là câu trả lời từ AI agent (mock). Trong production, đây sẽ là response từ O...
+
+------------------------------------------------------------
+Total requests: 5
+Instances used: {'instance-becd1c', 'instance-3886a4', 'instance-0c0380'}
+✅ All requests served despite different instances!
+
+--- Conversation History ---
+Total messages: 10
+  [user]: What is Docker?...
+  [assistant]: Container là cách đóng gói app để chạy ở mọi nơi. Build once...
+  [user]: Why do we need containers?...
+  [assistant]: Agent đang hoạt động tốt! (mock response) Hỏi thêm câu hỏi đ...
+  [user]: What is Kubernetes?...
+  [assistant]: Tôi là AI agent được deploy lên cloud. Câu hỏi của bạn đã đư...
+  [user]: How does load balancing work?...
+  [assistant]: Đây là câu trả lời từ AI agent (mock). Trong production, đây...
+  [user]: What is Redis used for?...
+  [assistant]: Đây là câu trả lời từ AI agent (mock). Trong production, đây...
+
+✅ Session history preserved across all instances via Redis!

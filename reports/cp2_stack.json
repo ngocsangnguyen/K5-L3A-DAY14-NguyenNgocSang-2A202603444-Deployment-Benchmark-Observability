@@ -1,0 +1,30 @@
+{
+  "cp2_health": {
+    "status": 200,
+    "body": "{\"status\":\"ok\",\"uptime_seconds\":214.6,\"version\":\"2.0.0\",\"timestamp\":\"2026-11-25T08:24:55.981186\"}",
+    "headers": {
+      "Server": "nginx",
+      "Date": "Wed, 25 Nov 2026 08:24:56 GMT",
+      "Content-Type": "application/json",
+      "Content-Length": "97",
+      "Connection": "close",
+      "X-Frame-Options": "DENY",
+      "X-Content-Type-Options": "nosniff",
+      "X-XSS-Protection": "1; mode=block"
+    }
+  },
+  "cp2_ask": {
+    "status": 200,
+    "body": "{\"answer\":\"Agent đang hoạt động tốt! (mock response) Hỏi thêm câu hỏi đi nhé.\"}",
+    "headers": {
+      "Server": "nginx",
+      "Date": "Wed, 25 Nov 2026 08:24:56 GMT",
+      "Content-Type": "application/json",
+      "Content-Length": "95",
+      "Connection": "close",
+      "X-Frame-Options": "DENY",
+      "X-Content-Type-Options": "nosniff",
+      "X-XSS-Protection": "1; mode=block"
+    }
+  }
+}

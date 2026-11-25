@@ -1,5 +1,9 @@
 # Part 6 — Final Project: Production-ready AI Agent
 
+> **Bản triển khai hiện tại (2026-11-25):** đã hoàn thiện app/Docker/Compose/env và cấu hình Railway/Render. Kết quả kiểm tra đầy đủ: `PASS 12/12` (43/43 checks), lưu tại `../reports/cp5_readiness.txt`. Public URL và test: `../DEPLOYMENT.md`. Các phần mô tả bản khung bên dưới được giữ làm đề bài tham chiếu.
+>
+> Docker chạy một worker/container; script chấm kiểm thêm hai worker native để xác nhận Redis state dùng chung. Khởi động local: copy `.env.example` thành `.env`, đặt `AGENT_API_KEY` riêng rồi `docker compose up --build`. Không ghi key vào câu lệnh/chụp ảnh công khai. `DAILY_BUDGET_USD` là ngân sách chung theo ngày UTC; token mock ước lượng ký tự/4. Rate limiter dùng Lua nguyên tử. Timeout Redis có thể chỉnh bằng `REDIS_CONNECT_TIMEOUT_SECONDS` và `REDIS_SOCKET_TIMEOUT_SECONDS`.
+
 Bạn tự xây một AI agent đủ chuẩn production từ **bản khung** trong thư mục này, kết hợp mọi thứ đã học ở Part 1–5.
 Mọi file đều đã có sẵn, phần việc của bạn nằm ở các chỗ ghi `TODO`. Bản khung chạy được nhưng **chưa đạt tiêu chí nào**.
 

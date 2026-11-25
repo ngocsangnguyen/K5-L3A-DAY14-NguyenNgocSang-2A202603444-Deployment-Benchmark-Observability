@@ -1,0 +1,14 @@
+{
+  "requested_replicas": 1,
+  "running_before": 1,
+  "users": 100,
+  "spawn_rate": 10,
+  "duration": "2m",
+  "mock_error_rate": 0.01,
+  "mock_slow_rate": 0.03,
+  "no_deps": true,
+  "started_at_utc": "2026-11-25T08:46:01Z",
+  "running_after": 1,
+  "locust_exit_code": 1,
+  "finished_at_utc": "2026-11-25T08:48:35Z"
+}

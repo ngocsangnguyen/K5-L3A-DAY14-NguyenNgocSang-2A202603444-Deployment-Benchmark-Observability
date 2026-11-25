@@ -1,0 +1,22 @@
+{
+  "base_url": "https://agent-production-a04c3e95.up.railway.app",
+  "date": "2026-11-25",
+  "results": {
+    "health": {
+      "status": 200,
+      "body": "{\"status\":\"ok\",\"environment\":\"production\"}"
+    },
+    "ready": {
+      "status": 200,
+      "body": "{\"ready\":true}"
+    },
+    "ask_without_key": {
+      "status": 401,
+      "body": "{\"detail\":\"Invalid or missing X-API-Key\"}"
+    },
+    "ask_with_key": {
+      "status": 200,
+      "body": "{\"question\":\"Hello\",\"answer\":\"Tôi là AI agent được deploy lên cloud. Câu hỏi của bạn đã được nhận.\",\"usage\":{\"input_tokens\":1,\"output_tokens\":17,\"cost_usd\":1.0350000000000001e-05,\"token_count_method\":\"characters_divided_by_4\"}}"
+    }
+  }
+}

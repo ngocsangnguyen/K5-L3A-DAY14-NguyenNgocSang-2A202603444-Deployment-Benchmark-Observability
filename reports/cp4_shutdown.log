@@ -1,0 +1,19 @@
+OS=posix; /health=200; /ready=200; in-flight request after SIGTERM=200; exit=0
+2026-11-25 07:55:54,329 INFO Starting agent on port 47209
+INFO:     Started server process [6]
+INFO:     Waiting for application startup.
+2026-11-25 07:55:54,546 INFO Agent starting up...
+2026-11-25 07:55:54,547 INFO Loading model and checking dependencies...
+2026-11-25 07:55:54,748 INFO ✅ Agent is ready!
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:47209 (Press CTRL+C to quit)
+INFO:     127.0.0.1:39760 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39762 - "GET /ready HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     127.0.0.1:39764 - "POST /ask?question=Hello HTTP/1.1" 200 OK
+INFO:     Waiting for application shutdown.
+2026-11-25 07:55:58,209 INFO 🔄 Graceful shutdown initiated...
+2026-11-25 07:55:58,210 INFO ✅ Shutdown complete
+INFO:     Application shutdown complete.
+INFO:     Finished server process [6]
+2026-11-25 07:55:58,212 INFO Received signal 15 — uvicorn will handle graceful shutdown

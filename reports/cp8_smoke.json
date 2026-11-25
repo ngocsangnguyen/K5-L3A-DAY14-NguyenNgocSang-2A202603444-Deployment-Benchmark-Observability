@@ -1,0 +1,33 @@
+{
+  "cp8_health": {
+    "status": 200,
+    "body": "{\"status\":\"ok\",\"version\":\"1.0.0\",\"agent_version\":\"v2\",\"instance\":\"af5d2369329d\"}",
+    "headers": {
+      "Server": "nginx/1.28.3",
+      "Date": "Wed, 25 Nov 2026 08:24:56 GMT",
+      "Content-Type": "application/json",
+      "Content-Length": "80",
+      "Connection": "close",
+      "x-request-id": "b37032a4b544",
+      "X-Served-By": "172.20.0.4:8000"
+    }
+  },
+  "cp8_ask": {
+    "status": 200,
+    "body": "{\"answer\":\"Prometheus pull metrics bằng cách scrape endpoint /metrics theo chu kỳ. Counter chỉ tăng (đếm request), Gauge lên xuống (request đang xử lý), Histogram chia latency vào các bucket để tính percentile bằng histogram_quantile.\",\"model\":\"mock-llm-small\",\"agent_version\":\"v2\",\"usage\":{\"input_tokens\":91,\"output_tokens\":55,\"cost_usd\":4.665e-05},\"llm_latency_ms\":169.0,\"request_id\":\"cddf7661364e\",\"trace_id\":\"b1800aa0a0c9a1640f18ac5740a29b6b\"}",
+    "headers": {
+      "Server": "nginx/1.28.3",
+      "Date": "Wed, 25 Nov 2026 08:24:57 GMT",
+      "Content-Type": "application/json",
+      "Content-Length": "473",
+      "Connection": "close",
+      "x-request-id": "cddf7661364e",
+      "x-trace-id": "b1800aa0a0c9a1640f18ac5740a29b6b",
+      "X-Served-By": "172.20.0.4:8000"
+    }
+  },
+  "cp8_metrics_blocked": {
+    "status": 404,
+    "body": "<html>\r\n<head><title>404 Not Found</title></head>\r\n<body>\r\n<center><h1>404 Not Found</h1></center>\r\n<hr><center>nginx/1.28.3</center>\r\n</body>\r\n</html>\r\n"
+  }
+}
